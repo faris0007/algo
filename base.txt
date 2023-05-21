@@ -1,43 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-***to suffule maximum shuff take upper pound of you if there isnot take smallest (f1 array suufle)
-
-*** when we need maximum dif we can use two pointer in it as max increase in some cases and minu as it and binary search cans used (e boring segment)
-
-*** when we neeed aaaa some b aaaa   if a is as same num two pointer  is used if he need longest sub sequence  (three block palin ) map of vector
-
-**** many string and need string exacty diifer in one pos   trie (waato and mecanism )
-
-**** num of bracket if we change exactly one brac wil be rbs  down in pdf implem
-
-
-*****  you want to know after kam num specific bit will turn off       n-(n&(1<<i))+(1<<i)
-
-******To make n from (a,b) ordered --->n+1 ways
-
-
-*****To make n from  unspecific num ---->2power (n-1);               (n-1) num of hwagez     1 .1 ..1.. 1.. 1.. 1 
-
-
-**** to get nums has specific prime inclusion exclosion
-
-
-***** gcd (x,y,z,a,s,f)----> gcd (x,y-x,z-x,a-x,s-x,f-x)       C. Row GCD   imp
-
-
-******      for(ll i = 1; i*i < x; i++)ans+=max(min(y,x/i-1)-i,0LL);   number of pair    a/b == a %b;    a<=x  b<=y ;   
-
-
-***** in ternary Build or remove    if (n % 2 == 0) {        median = (sticks[n / 2 - 1] + sticks[n / 2]) / 2;  } else {  median = sticks[n / 2];}   median goooooood  and point from m1 ----- m2
-
-
-*****  first missing sum  if 1 miss  then -->1 else  vido you tube  
-
-*** dif between  point has many segment   &&  segment intercect with how many segs
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
