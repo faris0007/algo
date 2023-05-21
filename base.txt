@@ -1,0 +1,2106 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+***to suffule maximum shuff take upper pound of you if there isnot take smallest (f1 array suufle)
+
+*** when we need maximum dif we can use two pointer in it as max increase in some cases and minu as it and binary search cans used (e boring segment)
+
+*** when we neeed aaaa some b aaaa   if a is as same num two pointer  is used if he need longest sub sequence  (three block palin ) map of vector
+
+**** many string and need string exacty diifer in one pos   trie (waato and mecanism )
+
+**** num of bracket if we change exactly one brac wil be rbs  down in pdf implem
+
+
+*****  you want to know after kam num specific bit will turn off       n-(n&(1<<i))+(1<<i)
+
+******To make n from (a,b) ordered --->n+1 ways
+
+
+*****To make n from  unspecific num ---->2power (n-1);               (n-1) num of hwagez     1 .1 ..1.. 1.. 1.. 1 
+
+
+**** to get nums has specific prime inclusion exclosion
+
+
+***** gcd (x,y,z,a,s,f)----> gcd (x,y-x,z-x,a-x,s-x,f-x)       C. Row GCD   imp
+
+
+******      for(ll i = 1; i*i < x; i++)ans+=max(min(y,x/i-1)-i,0LL);   number of pair    a/b == a %b;    a<=x  b<=y ;   
+
+
+***** in ternary Build or remove    if (n % 2 == 0) {        median = (sticks[n / 2 - 1] + sticks[n / 2]) / 2;  } else {  median = sticks[n / 2];}   median goooooood  and point from m1 ----- m2
+
+
+*****  first missing sum  if 1 miss  then -->1 else  vido you tube  
+
+*** dif between  point has many segment   &&  segment intercect with how many segs
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+#define all(v)				((v).begin()), ((v).end())
+fairs_mohamed007
+
+bool com( const pair<ll,pi> &p1,const pair<ll,pi> &p2) {
+    if (p1.first != p2.first) return p1.first < p2.first;
+    return p1.second.first > p2.second.first;
+}
+
+
+ ll fir = a[i].second - a[j].second;
+            ll sec = a[i].first - a[j].first;
+            ll thi = a[i].second * a[j].first - a[j].second * a[i].first;
+            ll gc = gcd(fir, gcd(sec, thi));
+            fir /= gc;
+            sec /= gc;
+            thi /= gc;
+            ll gc2 = gcd(fir, sec);
+            if(!mp.count({{fir, sec}, thi})) {
+                slop[{fir / gc2, sec / gc2}]++;   uniqe slope 
+            }
+            mp.insert({{fir, sec}, thi});	unique equation
+
+Gcd to uniqe line  
+
+
+/////////////      vip    to get num of divisor like that 100 ---> 1 1 1 1 1 1 1 1 . . .  2 2 2 2 . 3 3 3 3.  4 4 5 5  6 7 8 10 12
+       for (int j = 1; j * j <= i; ++j) {
+            mp[i/j]++
+            if (j == i / j)continue;
+            now = i / j;
+            ll len = (i) / (j + 1) + 1;
+            mp[j]+=(now - len + 1)));
+        }
+///////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////// longest altrenate for any two number in array
+                                                 you can use it if map is accepable or diffrent value is small 1e4  fav prob;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j <i ; ++j) {
+            ll x=pos[a[j]];
+            ll y=pos[a[i]];
+            dp[i][x]=dp[j][y]+1;  //  for each ind see me in each element before me and add 1;
+            maxo=max(maxo,dp[j][y]+1); 
+       }
+    }
+    cout<<maxo+1<<endl;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+   sort(points.begin(), points.end(), [] (bebo a, bebo b){
+        return a.position < b.position;
+    });
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ll getlower(ll n,ll i ,ll x){
+    ll st=1;
+    ll en=n;
+    while (st<en){
+        ll mid=st+(en-st)/2;
+        if(fun(mid)){
+            en=mid;
+        }
+        else{
+            st=mid+1;
+        }
+    }
+    return st;
+}
+ll getupper(ll n,ll i ,ll x){
+    ll st=1;
+    ll en=n;
+    while (st<en){
+        ll mid=st+(en-st+1)/2;
+        if(fun(mid)){
+            st=mid;
+        }
+        else{
+            en=mid-1;
+        }
+    }
+    return en;
+}
+
+
+
+    while (en - st >= 3) {
+        ll mid1 = st + ((en - st) / 3);
+        ll mid2 = en - ((en - st) / 3);
+        if (fun(mid1, a, b) < fun(mid2, a, b)) {
+            en = mid2;
+        } else {
+            st = mid1;
+        }
+    }
+ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////maximum subarray if there is negative 
+										// if only postive azn all array
+int best = 0, sum = 0;
+for (int k = 0; k < n; k++) {
+	sum = max(array[k],sum+array[k]);
+	best = max(best,sum);
+}
+cout << best << "\n";
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+					//NEXT
+
+
+
+
+
+int power(int a, int b,ll m) {
+    if (b == 0) return 1;
+    a = a % m;
+    int temp = power(a, b / 2, m);
+    if (b & 1)
+        return (((temp * temp) % m) * a) % m;
+    else
+        return (temp * temp) % m;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////   generate subset ;
+
+
+for (int b = 0; b < (1<<n); b++) {
+vector<long long> subset;
+        for (int i = 0; i < n; i++) {
+                if (b&(1<<i)) subset.push_back(a[i]);    //  if b begin from 0 phay include if 1 oppsite   a is vector we get subset to it ;
+        }
+        //// here we can do any thing  to each subset   order (n*n);
+       
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                                                    
+                                           //  NEXT                     
+
+
+////////////////////////////////////////////////////////////////////////////////// generate perme order(n*fact(n)) // shoudl be vector of int 
+ do{
+        for(int i=0;i<a.size();i++){
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;                             // here we can do any thing in any perm
+
+    }while(next_permutation(all(a)));
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+
+
+                                                        //NEXT
+                                                        
+                                                       
+ ///////////////////////////////////////////////////////////////////////////////////////////////////maximum path from s to destina  right down only                                                         
+  bool valid(int i ,int j,int n, int  m){
+        if(i>=0 && j>=0 && i<n && j<m){
+            return true;
+        }
+        else{
+            return false;
+        }
+ }
+
+ ll max_path(vii &grid,int r,int c,int n,int m){
+    if(!valid(r,c,n,m)){
+        return 0;                               // valid vip: if you want to change destination play in valid fun i<  && j<
+    }
+
+  	ll path1 = max_path(grid,r, c+1,n,m);	 // right
+	ll path2 = max_path(grid,r+1,c,n,m);	 // down
+
+	return grid[r][c]+max(path1,path2);
+
+        // vip in this fun you dont have to make visited array as it right or down;
+        
+        // call (grid,0,0,n,m)
+
+ }
+                                                                                                                                                             
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+								//NEXT
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////there_is_away from S to E  and X is block 
+ 
+
+  bool valid(int i ,int j,int n, int  m){
+        if(i>=0 && j>=0 && i<n && j<m){
+            return true;
+        }
+        else{
+            return false;
+        }
+ }
+
+ bool there_is_away(vector<vector<char>> &grid,  vii &visited  ,int r, int c,  int n, int m){
+
+        if(!valid(r,c,n,m) || visited[r][c]==1 ||grid[r][c]=='X' )return false; //   check valid and make any char as block
+
+         visited[r][c] = 1;
+
+
+        if(grid[r][c]=='E') return true;                    // make any char destination
+
+        if(there_is_away(grid,visited,r, c-1,n,m)) return true;  	// search up		***// if we want to know long of path make global vary
+            if(there_is_away(grid,visited,r, c+1,n,m)) return true;  	 // search down		***// and put him in 4 if before return;
+                if(there_is_away(grid,visited,r-1, c,n,m)) return true;   // search left
+                    if(there_is_away(grid,visited,r+1, c,n,m)) return true; // search right
+
+       return false;
+
+ }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+								//NEXT
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////count num of path .
+
+
+
+ll num_of_path=0;   ///  global vary important ;
+
+void count_num_paths(vector<vector<char>> &grid,int r, int c,int n,int m)		// Recursion State: r, c
+{
+    if( grid[r][c] =='E')
+    {
+    	num_of_path++;
+    	return;
+    }
+
+
+    int dx[] = {0, 1, 0, -1};
+    int dy[] = {1, 0, -1, 0};
+
+    for(int d=0;d<4;d++){
+
+    	int nr = r+dx[d];
+    	int nc = c+dy[d];
+
+    	if(valid(nr, nc,n,m) && grid[nr][nc]!='X'){   // block X
+
+    		if(grid[nr][nc] != 'E')			// do
+    			grid[nr][nc] = 'X';
+
+    		count_num_paths(grid, nr, nc, n, m);			// rec
+
+    		if(grid[nr][nc] != 'E')			// undo
+    		    grid[nr][nc] = '.';
+    	}
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+							//NEXT
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// dfs for array agj mat
+
+
+vii adjmatrix;
+bool visted[oo][oo] ={false};
+
+void dfs(ll r,ll c,ll n,ll m){
+ 
+    if(!valid(r,c,n,m) || visted[r][c] || adjlist[r][c]=='X' ) return;
+        visted[r][c]=true;
+ 
+        // proces in each  
+ 
+        dfs(r, c-1,n,m);
+            dfs(r, c+1,n,m)   ;
+                dfs(r-1, c,n,m);
+                    dfs(r+1, c,n,m);
+ 
+ 
+}
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+							//NEXT
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// bfs for array adj mat
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+							//NEXT
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////dfs for connected graph adj list
+
+
+bool visited[oo];
+vii adjlist; // num of node    ///imp make vii a(n+1) and adjlist=a;   ///******
+
+void dfs(int s){
+    if(visited[s])return;
+    visited[s]=true;
+
+		// prosses 
+	
+    for(auto u :adjlist[s]){
+        dfs(u);
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+						// NEXT
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// bfs for connected graph adj list
+bool visited[oo];
+int  distance[oo];
+vii adjlist; // num of node    ///imp make vii a(n+1) and adjlist=a;   ///******
+queue<int> q;
+
+void bfs(int s){
+				/////    if(visite[s]==true)return;    vip***** for un connected 
+	q.push(s);
+	visited[s]=true;
+	distance[s]=0;
+	while(!q.empty()){
+
+            int x=q.front(); q.pop();
+
+
+            // pross
+
+            for(auto u:adjlist[x]){
+                if(visited[u])continue ;
+                visited[u]=true;
+                distance[u]=distance[x]+1;
+                q.push(u);
+            }
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+								//NEXT
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  count of component
+ll count_component=0;
+for(int i=1;i<n+1;i++){
+            if(!visited[i])
+                    {
+                        dfs(i);     ///////////////////////////////////////dfs of array matrix or of graph adj list;
+                        count_component++;
+                    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+						// NEXT
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////// how  to take undirct adjlist 
+
+ll n,m;
+cin>>n>>m;
+vii a(n+1);
+adjlist=a;
+ 									
+foor(i,0,m){
+ll  x,y;
+cin>>x>>y;
+adjlist[x].push_back(y);
+adjlist[y].push_back(x);
+ 
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+				// NEXT
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////bipartite or not 
+
+
+
+
+vii adjlist; // num of node    ///imp make vii a(n+1) and adjlist=a;   ///******
+
+bool isBipartite(int V)/////  num of nodes   not start
+{
+    // vector to store colour of vertex
+    // assigning all to -1 i.e. uncoloured
+    // colours are either 0 or 1
+    // for understanding take 0 as red and 1 as blue
+    vector<int> col(V+1, -1);
+
+    // queue for BFS storing {vertex , colour}
+    queue<pair<int, int> > q;
+
+    //loop incase graph is not connected
+    for (int i = 1; i <= V; i++) {
+
+        //if not coloured
+        if (col[i] == -1) {
+
+            //colouring with 0 i.e. red
+            q.push({ i, 0 });
+            col[i] = 0;
+
+            while (!q.empty()) {
+                pair<int, int> p = q.front();
+                q.pop();
+
+                //current vertex
+                int v = p.first;
+                //colour of current vertex
+                int c = p.second;
+
+                //traversing vertexes connected to current vertex
+                for (int j : adjlist[v]) {
+
+                    //if already coloured with parent vertex color
+                    //then bipartite graph is not possible
+                    if (col[j] == c)
+                        return 0;
+
+                    //if uncoloured
+                    if (col[j] == -1) {
+                        //colouring with opposite color to that of parent
+                        col[j] = (c) ? 0 : 1;
+                        q.push({ j, col[j] });
+                    }
+                }
+            }
+        }
+    }
+    //if all vertexes are coloured such that
+    //no two connected vertex have same colours
+    return 1;
+}
+
+
+me
+bool bfs(ll node,vii &adj,vi &col) {
+    for (int i = 1; i <= adj.size() - 1; ++i) {
+        if (col[i]!=-1)continue;
+        queue<ll> q;
+        q.push(i);
+        col[i] = 1;
+        while (q.size()) {
+            ll now = q.front();
+            q.pop();
+            for (auto ch: adj[now]) {
+                if (col[ch] == -1) {
+                    col[ch] = 1 ^ col[now];
+                    q.push(ch);
+                } else if (col[ch] != col[now]) {
+                    continue;
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+					
+						//NEXT
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////detect cycle in un directed adjlist
+
+
+//   call dfs(start,-1); //
+bool cycle =false;
+void dfs(pi s){
+    if(visited[s.first])return;
+    visited[s.first]=true;
+
+		// prosses
+    for(auto u :adjlist[s.first]){
+        if(visited[u] && u!=s.second){
+            cycle=true;
+        }
+        dfs({u,s.first});   
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+					
+					//NEXT
+
+
+
+////////////////////////////////////////////////////////////////////////////////////detect cycle in direct graph 
+vii adjlist;
+map<ll,ll> start;
+map<ll,ll> finish;
+map<ll,bool> visited;
+ll timer=0;
+bool cycle=false;
+
+void dfs_edge_class(int s){
+
+	// process in node //ss
+
+    visited[s]=true;
+        start[s]=timer++;
+    for(auto u :adjlist[s]){
+           if (start[u] == 0)
+           {
+               dfs_edge_class(u);
+           }
+            else
+            {
+                if(finish[u] == 0)/////   cycle mostafa saad
+                    cycle = true;
+
+            }
+    }
+        finish[s]=timer++;
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+						//NEXT
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////maximum depth  undirected without bfs
+
+void dfs (ll node) {
+    visited[node] = true;
+    num++;
+	 if (num > mx)
+                mx = num;
+    for (auto child : arr[node]){
+        if (!visited[child]) {							//not 100 % correct
+
+            dfs(child);
+        }
+    }
+    num--;   // if  not direct delete;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+				//NEXT
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////// dep2[] every  node has long  path = ;
+
+void dfs_mark_depth(ll s ,ll high)
+{
+        if(vis[s]) return;
+        vis[s]=true;
+          dep[s]=high;
+
+        for(auto u: adjlist[s])
+        {
+                dfs_mark_depth(u,high+1);
+
+        }
+        if(adjlist[s].size()!=0)
+        {
+            for(auto u: adjlist[s])
+            {
+                   dep2[s]=max(dep2[u]+1,dep2[s]);
+
+            }
+        }
+        else
+        {
+         dep2[s]=0;
+        }
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//// longest path in  tree from any node    code glal                problem//   Brain Network (medium)
+2 bfs or to get the path 
+get 2 node use dfs from one to another 
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+			// next
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// dsu ;
+unordered_map<ll,ll> parent;
+unordered_map<ll,ll> siz;
+
+void intiz(ll n){
+    foor(i,1,n+1){
+        parent[i]=i;
+        siz[i]=1;
+    }
+}
+
+ll findParent(ll s){
+    if(parent[s]==s){
+        return s;
+    }
+    return parent[s]= findParent(parent[s]);
+}
+void connect(ll u,ll v){
+    u= findParent(u);
+    v= findParent(v);
+    if(u==v){
+        return; // cycle neglect  and detect
+    }
+    if(siz[u]>siz[v]){
+        parent[v]=parent[u];
+        siz[u]+=siz[v];
+    }
+    else{
+        parent[u]=parent[v];
+        siz[v]+=siz[u];
+    }
+}
+bool is_con(ll u,ll v){
+    return findParent(u)== findParent(v);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ll n,m;
+cin>>n>>m;
+     intiz(n);
+foor(i,0,m){
+	ll u,v;
+	cin>>u>>v;
+	if(!is_con(u,v)){
+		 connect(u,v);	
+	}
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////  dijkstra
+
+unordered_map<ll,ll> dis;
+viip adj;
+
+void dijkstra(ll start ,ll n) {
+
+    for (int i = 1; i <= n; i++)
+        dis[i] = oo;
+
+
+
+    priority_queue<pi> pq;
+    pq.push({0, start});
+    dis[start] = 0;
+
+
+    while (!pq.empty()) {
+
+        ll node = pq.top().second;
+	ll distance = -pq.top().first;
+        pq.pop();
+
+
+         if(distance > dis[node])		// to improve order    // lika avisited imp
+            continue;
+
+        for (auto u: adj[node]) {
+
+            ll child = u.first;
+            ll wei = u.second;
+
+            if (dis[node] + wei < dis[child]) {			// this line is imp for not return to par or to avoid go to node has visited before ;
+                dis[child] = dis[node] + wei;       	        // < is impo for improve ;
+                pq.push({-dis[child], child});			// = is impo for second shortest way ;
+            }
+
+        }
+    }
+}
+
+
+   foor(i,0,m){
+            ll u,v,w;
+            cin>>u>>v>>w;
+            adj[u].push_back({v,w});
+            adj[v].push_back({u,w});
+        }
+        dijkstra(st,n);
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+unordered_map<ll,ll> dist;
+bool negCycle;
+void Bellman_Ford( int src ,ll n,vector<bebo> &edges) {
+    for (int i = 1; i <= n; i++) {
+        dist[i] = oo;						// from 1 to n;
+    }
+    dist[src] = 0;
+    // O(n * m)
+    for (int lvl = 1; lvl <= n; lvl++) { // vipppp if we continue after n by n loops every node her dist with src change is before cycle in sheet pr(3)
+        for (int j = 0; j < edges.size(); j++) {
+            int u = edges[j].fir, v = edges[j].sec, w = edges[j].thi;  // bebo
+            if (dist[u] + w < dist[v]) {
+                if (i == n)
+                    negCycle = true;
+                dist[v] = dist[u] + w;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == j) distance[i][j] = 0; 		// detect ncycle;
+
+                else if (adj[i][j]) { distance[i][j] = adj[i][j]; }
+
+                else distance[i][j] = oo;
+            }
+}
+
+
+
+void floyed_warshal(){
+
+ for (int k = 1; k <= n; k++) {                     
+             for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                     dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
+
+	// if we put chosen node in middle betw two node a,b,c ( min((sum a,c +b,c),a,b))
+	// vippppppp if we dis[i][j] = min(dis[i][j],max( dis[i][k] , dis[k][j])); help to minimzie the max weight  in road
+	// vippppppp if we dis[i][j] = min(dis[i][j],min( dis[i][k] , dis[k][j])) ;help to minimzie the min weight  in road
+
+
+
+                 }
+
+             }
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ vi path;
+unordered_map<ll,bool> visited;
+viip adj;
+
+void euler(ll src){
+    while (!adj[src].empty()){
+        ll nod=adj[src].back().first;
+        ll ind=adj[src].back().second;
+        adj[src].pop_back();
+        if(visited[ind])continue;
+            visited[ind]= true;
+            euler(nod);
+    }
+    path.push_back(src);
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+			// DYNAMIC    ................................................PROGRAMING
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////min--max  remove from left or right
+
+
+ll fun(ll i,ll j,ll me) {
+    if (i > j)return 0;
+    if (dp[i][j][me] != -1)return dp[i][j][me];
+    ll opt1 = 0, opt2 = 0;
+    opt1 = fun(i + 1, j, 1 ^ me) + ((me == 1) ? a[i] : 0ll);
+    opt2 = fun(i, j - 1, 1 ^ me) + ((me == 1) ? a[j] : 0ll);
+    if (me) {
+        return dp[i][j][me] = max(opt1, opt2);
+    } else {
+        return dp[i][j][me] = min(opt1, opt2);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////longest sub seq
+
+const int N=100;
+vi a;  // give a=aa(n+1,0);
+ll dp[N][N];
+ll vis[N][N];
+ll LSUB(ll inx ,ll last){
+    if(inx==a.size())   // one based a.size=n+1 
+            return 0;
+    
+    if(vis[inx][last])
+        return dp[inx][last];         // to improve order to (n*n)   // we can intilz dp with -1 and delete vis; 
+    
+    vis[inx][last] = 1;     
+    
+    ll opt2=0,opt1=0;               // opt2 should be zero because not alwayes enter its block but opt 1 not impo
+     opt1= LSUB(inx+1,last);
+     
+    if(a[inx]>a[last])              //   because increasing 
+         opt2= 1+LSUB(inx+1,inx);
+    
+    dp[inx][last]=max(opt1,opt2);
+    return max(opt1,opt2);
+}
+  
+
+
+// iterative
+
+memset(1)
+   foor(i,0,n){
+        foor(j,0,i){
+            if(a[i]>a[j]) dp[i]=max(dp[i],dp[j]+1);
+        }
+    }
+        cout<<*max_element(all(dp))<<endl;
+
+
+// path 
+		dp -----> vector of pair first=lenth ,sec =index come from ;
+		dp.sec=j;
+
+    ll ind= max_element(all(dp))-dp.begin();
+    ll con=dp[ind].first;
+    vi res;
+    ll cur=ind;
+    while (con){
+         if(cur!=-1) {res.push_back(a[cur]);con--;}
+         else{break;}
+        cur=dp[cur].second;
+    }
+    for(int i=res.size()-1;i>=0;i--){cout<<res[i]<<" ";}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+   incraseaing nlog n;
+
+      ll num;cin>>num;
+        vll vec(num);
+        fo(i,num)cin>>vec[i];
+        vll longe;
+        fvec(item,vec){
+            auto index=lower_bound(all(longe),item);
+            if(index==longe.end())longe.pb(item);
+            else{
+                longe[index-longe.begin()]=item;
+            }
+        }
+        cout<<longe.size();
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////KNAPSACK;
+		
+// order (n*w)
+
+vi wei,value;
+ll dp[60][1005];
+ll vis[66][1005];
+ll n;
+ll KNAPSACK(ll inx ,ll reminder) {
+
+    if (inx == n) {	vip	// we can intilz dp with -1 and delete vis; if i want to use wei == kilos exactly in there if(remi!=0) return -inf;
+        return 0;
+    }
+    if (vis[inx][reminder])
+        return dp[inx][reminder];
+
+    vis[inx][reminder] = 1;
+    ll opt1 = 0, opt2 = 0;
+    opt1 = KNAPSACK(inx + 1, reminder);
+
+    if (wei[inx] <= reminder)
+        opt2 = KNAPSACK(inx + 1, reminder - wei[inx]) + value[inx];
+    dp[inx][reminder] = max(opt1, opt2);
+    return max(opt1, opt2);
+
+}
+
+
+//   itrative
+                wei.resize(n+1,0);
+                val.resize(n+1,0);
+memset(0)
+            vii dp(n+1,vi(kilos+1,0));
+            foor(i,1,n+1) {					//one based
+                foor(j, 1, kilos+1) {
+                    dp[i][j] = dp[i - 1][j];
+                    if (j >= wei[i])
+                        dp[i][j] = max(dp[i][j], dp[i-1][j - wei[i]] + val[i]);
+                }
+            }
+                  cout << dp[n][kilos] << ".\n";
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////longest comm subseq;
+
+string x,y;
+ll dp[1050][1050];
+ll LCS(ll inx1 ,ll inx2) {
+
+    if(inx1==x.size() || inx2==y.size())return 0;
+
+    if(dp[inx1][inx2]!=-1)return dp[inx1][inx2];
+
+    ll opt1=0,opt2=0,opt3=0;
+    if(x[inx1]==y[inx2]){
+        opt3= LCS(inx1+1,inx2+1)+1;
+    }
+    else {
+        opt1 = LCS(inx1 + 1, inx2);
+        opt2 = LCS(inx1, inx2 + 1);
+    }
+
+    dp[inx1][inx2]=max3(opt1,opt2,opt3);
+    return max3(opt1,opt2,opt3);
+}
+
+
+void path(ll inx1 ,ll inx2) {
+
+    if (inx1 == x.size() || inx2 == y.size())return;
+    if (x[inx1] == y[inx2]) {
+        cout << x[inx1];
+        path(inx1+1, inx2+1);
+    } else {
+        ll opt1 = LCS(inx1 + 1, inx2);
+        ll opt2 = LCS(inx1, inx2 + 1);
+        if (opt1 >= opt2) {
+            path(inx1 + 1, inx2);
+        } else {
+            path(inx1, inx2 + 1);
+        }
+    }
+}
+
+
+///// iterative 
+
+		memset(0)
+
+        foor(i,1,x.size()+1){
+            foor(j,1,y.size()+1){
+                if(x[i-1]==y[j-1]){
+                    dp[i][j]=1+dp[i-1][j-1];
+                }
+                else{
+                    dp[i][j]= max(dp[i-1][j],dp[i][j-1]);
+                }
+            }
+        }
+        cout<<dp[x.size()][y.size()]<<endl;
+
+
+
+
+path 
+
+        ll i=x.size(),j=y.size();
+        vector<char> res;
+    while (i>0 &&  j>0){
+        if(x[i-1]==y[j-1]){   // zero based string and dp one pased
+            res.push_back(x[i-1]);
+            i--;j--;
+        }
+        else{
+            if(dp[i-1][j]>dp[i][j-1]){
+                    i--;
+            }
+            else{
+                j--;
+            }
+        }
+    }
+    reverse(all(res));
+    foor(i,0,res.size())cout<<res[i];
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////minumum num of coins
+
+
+ll dp[coins][num of money];
+vi coin={1,4,9,16,25};
+ll COINCHANGE(ll inx1 ,ll reminder) {
+
+    if(reminder==0 )return 0;			// no more money
+
+    if(reminder<0 || inx1> sizeofcoins)return  1e9; // for opt1 to avoid neg   for opt2 to avoid inx>size;
+
+    if(dp[inx1][reminder]!=-1)return dp[inx1][reminder];
+
+    ll opt1=1e9;ll opt2=1e9;			// we need min so should biggggg
+
+    opt1=1+ COINCHANGE(inx1,reminder-coin[inx1]);
+    opt2= COINCHANGE(inx1+1,reminder);
+
+    dp[inx1][reminder]=min(opt1,opt2);
+    return min(opt1,opt2);
+}
+
+
+iterative and path in book
+    memset (oo)
+   dp[0]=0;
+        foor(i,1,n+1){
+            for(auto  c:coin){
+                if(i-c>=0)dp[i]=min(dp[i-c]+1,dp[i]);
+            }
+        }
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// num of ways;
+
+vi a={50,25,10,5,1};
+ll dp[6][7490];
+ll COINCHANGE(ll inx1,ll reminder) {
+
+    if(reminder==0 || inx1==a.size()-1)return 1;
+
+    if(reminder<0 || inx1>=a.size())return 0;
+
+    if (dp[inx1][reminder] != -1)return dp[inx1][reminder];
+
+    ll opt1 = 0, opt2 = 0;
+    opt1 = COINCHANGE(inx1+1, reminder);
+    opt2= COINCHANGE(inx1,reminder-a[inx1]);
+    return dp[inx1][reminder]=opt2+opt1;
+}
+
+
+	// iterative 			// best because  you have all solve(x) 1<=x<=n;
+
+
+    ll coin[5]={1,5,10,25,50};
+    vi dp(100,0);
+    dp[0]=1;
+        foor(i,0,5){
+            foor(j,1,n+1){
+                if(j-coin[i]>=0)
+                    dp[j]+=dp[j-coin[i]];
+            }
+        }
+
+////  if oreder is important ;
+
+
+      dp[0]=1;
+        foor(i,1,n+1){
+            for(auto  c:coin){
+                if(i-c>=0)dp[i]+=dp[i-c];
+            }
+        }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+consuctive range choise to push class to class or not  (ab)(cd) or (abc)(d)
+
+ll dp[900];
+ll n;
+ll rec(ll inx1){
+
+    if(inx1==n)return 0;
+    if(dp[inx1]!=-1)return dp[inx1];
+    ll ans=1e17,sum=0;
+    foor(i,inx1,n){
+        sum+=needed[i];
+        ans=min(ans,(sum+10)*price[i]+ rec(i+1));
+    }
+    return dp[inx1]=ans;
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+make paildrome in minmum
+
+string x;
+ll dp[8000][8000];
+
+ll rec(ll inx1,ll inx2){
+
+    if(inx1==inx2 || inx2<inx1)return 0;
+
+    if(dp[inx1][inx2]!=-1)return dp[inx1][inx2];
+
+    ll opt1=1e15,opt2=1e15,opt3=1e15,opt4=1e15;
+    if(x[inx1]== x[inx2]){
+        opt1= rec(inx1+1,inx2-1);
+    }
+    else{
+        opt2= rec(inx1+1,inx2)+1;
+        opt3= rec(inx1,inx2-1)+1;
+    }
+    return dp[inx1][inx2]= min3(opt1,opt3,opt2);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+edit distance --------> in book; recr in virtual coach
+
+		    string x,y;
+    cin>>x>>y;
+    vector<vector<ll>> dp(x.size()+1,vector<ll> (y.size()+1,0));
+
+    foor(i,0,x.size()+1) {
+        foor(j, 0, y.size() + 1) {
+            if (i == 0)dp[i][j] = j;
+            else if (j == 0)dp[i][j] = i;
+            else {
+                ll cos = 1;if (x[i - 1] == y[j - 1]) { cos = 0; }
+                dp[i][j] = min3(1 + dp[i - 1][j], 1 + dp[i][j - 1], cos + dp[i - 1][j - 1]);
+            }
+        }
+    }
+        cout << dp[x.size()][y.size()] << endl;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+nested range  like cuting sticks
+
+vi cuts;
+ll dp[1001][1001];
+ll rec(ll s,ll e) {
+    if (s == e)return 0;
+    if (dp[s][e] != -1)return dp[s][e];
+    ll ans = 1e16;
+    foor(i, 0, cuts.size()) {
+        if (cuts[i] >= s && cuts[i] < e) {
+            ans = min((e - s + 1) + rec(s, cuts[i]) + rec(cuts[i] + 1, e), ans);
+        }
+    }
+    if (ans == 1e16)ans = 0;
+    return dp[s][e] = ans;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////bitmask example
+
+
+
+
+
+vip points;
+ll q;
+ll dp[50][2000];
+ll rec(ll inx1,ll msk) {
+
+    if (dp[inx1][msk] != -1)return dp[inx1][msk];
+    if (msk == (1 << q) - 1) {
+        return abs(points[0].first - points[inx1].first) + abs(points[0].second - points[inx1].second);
+    }
+    ll opt1 = 1e9;
+    foor(i, 1, q + 1) {
+        if (msk & (1<<(i-1)) ) continue;
+   opt1 = min(opt1, rec(i , msk | (1<<(i-1))) + abs(points[i].first - points[inx1].first) +abs(points[i].second - points[inx1].second));
+    }
+    return dp[inx1][msk] = opt1;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+						string hashing
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////single hash
+
+vi  pw(1e6+9);				// size of string   imp 
+vi inv(1e6+9);
+ll add(ll a, ll b) {
+    return ((a % MOD + b % MOD) + MOD) % MOD;
+}
+
+ll multi(ll a, ll b) {
+    return ((a % MOD * b % MOD) + MOD) % MOD;
+}
+
+ll minu(ll a, ll b) {
+    return ((a % MOD - b % MOD) + MOD) % MOD;
+}
+
+ll fastpow(ll a, ll b) {
+    if (b == 0)return ll(1);
+    ll temp = fastpow(a, b / 2);
+    ll total = multi(temp, temp);
+    if (b % 2 == 1) {
+        total = multi(total, a);
+    }
+    return total;
+}
+
+void pre(ll base) {
+    pw[0] = 1;
+    inv[0] = 1;
+    ll mul_inv = fastpow(base, MOD - 2);
+    for (int i = 1; i < 1e6+9; ++i) {			 ///////////////////////////////////// sizoooooooo
+        pw[i] = multi(pw[i - 1], base);
+        inv[i] = multi(inv[i - 1], mul_inv);
+    }
+}
+
+void make_hash(string &x, vi &prifx) {
+    for (int i = 0; i < x.size(); ++i) {
+        ll ind = x[i] - 'a' + 1;   				 // if lower case  impor
+        prifx[i] = multi(ind, pw[i]);
+        if (i > 0) {
+            prifx[i] = add(prifx[i], prifx[i - 1]);
+        }
+    }
+}
+
+ll get_value(ll fir, ll sec, vi &prifx) {    /// if fir =0  sec=size-1   all value     ;;  zero based;
+    if(fir==0)
+        return prifx[sec];
+    return multi(minu(prifx[sec],prifx[fir-1]),inv[fir]);
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////douple 
+
+void pre() {
+    pw[0] = 1;
+    inv[0] = 1;
+    pw2[0] = 1;
+    inv2[0] = 1;
+    ll mul_inv = fastpow(29, MOD - 2);
+    ll mul_inv2 = fastpow(31, MOD - 2);
+    for (int i = 1; i < 1e5+9; ++i) {       ///////////////////////////////////// sizoooooooo
+        pw[i] = multi(pw[i - 1], 29);
+        inv[i] = multi(inv[i - 1], mul_inv);
+        pw2[i] = multi(pw2[i - 1], 31);
+        inv2[i] = multi(inv2[i - 1], mul_inv2);
+    }
+}
+void make_hash(string &x, vi &prifx , vi &pw ,vi &inv) {
+    for (int i = 0; i < x.size(); ++i) {
+        ll ind = x[i] - 'a' + 1;   			 // if lower case   //  this fun for two hash because each base has value pw ,inv ;
+        prifx[i] = multi(ind, pw[i]);  
+        if (i > 0) {								
+            prifx[i] = add(prifx[i], prifx[i - 1]);
+        }
+    }
+}
+ll get_value(ll fir, ll sec, vi &prifx, vi &pw ,vi &inv) {
+    if(fir==0)
+        return prifx[sec];
+    return multi(minu(prifx[sec],prifx[fir-1]),inv[fir]);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int longestPrefixSuffix(string s)
+{
+    int n = s.length();
+    int lps[n];
+    lps[0] = 0;
+    int len = 0;
+    int i = 1;
+    while (i < n)
+    {
+        if (s[i] == s[len])
+        {
+            len++;
+            lps[i] = len;
+            i++;
+        }
+        else
+        {
+            if (len != 0)
+                len = lps[len-1];
+            else
+            {
+                lps[i] = 0;
+                i++;
+            }
+        }
+    }
+    return lps[n-1];
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////KMP
+
+void kmp(string &x, vi &fail) {
+    for (int i = 1; i < x.size(); ++i) {
+        ll j = fail[i - 1];
+        while (j > 0 && x[j] != x[i])
+            j = fail[j - 1];
+        if (x[i] == x[j])
+            fail[i] = j + 1;
+        else
+            fail[i] = 0;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ idea 
+////////////////////////////////////////////////////////////////////////////////
+1-find patern 
+	two way---->   pat@string    for every pat.size in fail 1 occur
+	---->
+    kmp(pat,fail);
+    ll j=0;
+    for (int i = 0; i < x.size(); ++i) {
+        while (j > 0 && x[i] != pat[j])
+            j = fail[j - 1];
+        if (x[i] == pat[j])
+            j++;
+         if(j==pat.size()){
+             res.push_back(i-j+2);
+             j=fail[j-1];
+         }
+    }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+2- longest pre in same suf----> last elemnt in fali arr
+3- longest suf pailndrom -----> rev x @ x  last element in fail arr  // when use @ kmp use to know الي اي درجة تشبة البداية should make reverse in front //
+4- what is min char add from end to make pail ----> as above find long suf pail and add other char 
+5- what is min rept for string to make larger string -->fail arr wil be as 0000 12345678 -->abcdabcdabcd ---> len -last elemt =r && len%r==0
+7- for each pre count his freq in another strin ---> 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+8-find second and third longest pre suf---->
+    while(x>0) {
+        x = fail[x - 1];
+    }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+vip 6- to get freq of all prefix ---->
+
+    vi fail(x.size(),0);
+    kmp(x,fail);
+    vi mp(x.size()+1,0);
+    for (int i = 0; i <fail.size() ; ++i) {
+        mp[fail[i]]++;
+    }
+    for (int i = fail.size()-1; i >0 ; --i) {		// mp arr start from one ---> mp[z] z is length of prefix;
+        mp[fail[i-1]]+=mp[i];
+    }
+
+to check if any prefix is a suffix we can go through of all pre suf by useing that--> 8 -->
+
+          8-find second and third longest pre suf---->
+                 while(x>0) {
+                          x = fail[x - 1];
+                    }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////trie
+
+struct Node{
+    Node *nxt[26];
+    ll cnt;
+    bool isleaf;
+    Node(){
+        memset(nxt,0,sizeof nxt);
+        cnt=0;
+        isleaf= false;
+    }
+}*head;
+
+void insert(string &s) {
+    Node *cur = head;
+    for (int i = 0; i < s.size(); ++i) {
+        if (!cur->nxt[s[i] - 'a']) {
+            cur->nxt[s[i] - 'a'] = new Node();
+        }
+        cur = cur->nxt[s[i] - 'a'];
+        cur->cnt++;
+    }
+    cur->islea = true;
+}
+
+call head=new Node();  in solve;
+
+uses when many strings
+1---> num of str contanin any same pref or suf with lenght k --> map of multi set on cnt
+2---> num of uniqe substring 
+3--->num of str contain certain pref or suf and get strings by vec of indeci 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+ll lg[N];
+void Build_sparce(vii & sp,vi &a) {
+    ll n = a.size();
+    lg[1] = 0;
+    for (int i = 2; i <= n; ++i) {
+        lg[i] = lg[i / 2] + 1;
+    }
+    for (int i = 0; i < n; ++i) {
+        sp[i][0] = a[i];
+    }
+    for (int bits = 1; bits < sp[0].size(); ++bits) {
+        for (int i = 0; i <= (n - (1 << bits)); ++i) {
+            sp[i][bits] = max(sp[i][bits - 1], sp[i + (1 << bits - 1)][bits - 1]);
+        }
+    }
+}
+ll qmax(ll l, ll r, vii &sp) { // zero based;
+    ll dis = lg[r - l + 1];
+    return max(sp[l][dis], sp[r - (1 << dis) + 1][dis]);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LCA
+
+
+
+const int N = 5 * 1e5;
+const int M = 30;
+ll ansector[N][M];
+ll lvl[N];
+vii adj;
+
+void dfs(ll node, ll par) {
+    ansector[node][0] = par;
+    lvl[node] = lvl[par] + 1;
+    for (int i = 1; i < M; ++i) {
+        ansector[node][i] = ansector[ansector[node][i - 1]][i - 1];
+    }
+    for (auto ch: adj[node]) {
+        if (ch == par)continue;
+        dfs(ch, node);
+    }
+}
+
+ll findKthAncestor(ll u, ll k) {
+    for (int i = M - 1; i >= 0; --i) {
+        if ((1 << i) & k)
+            u = ansector[u][i];
+    }
+    return u;
+}
+
+ll LCA(ll u, ll v) {
+    if (lvl[u] < lvl[v])
+        swap(u, v);
+    u = findKthAncestor(u, lvl[u] - lvl[v]);
+    if (u == v)return v;
+
+    for (int i = M - 1; i >= 0; --i) {
+        if (ansector[u][i] == ansector[v][i])continue;
+        u = ansector[u][i];
+        v = ansector[v][i];
+    }
+    return ansector[u][0];
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////segment tree for sum
+ll seg[N<<2];
+ll arr[N];
+
+void Build_seg(ll node,ll l , ll r) {
+    if (l == r) {
+        seg[node] = arr[l];
+        return;
+    }
+    ll mid = (l + r) / 2;
+    Build_seg(node * 2, l, mid);
+    Build_seg(node * 2 + 1, mid + 1, r);
+    seg[node] = seg[node * 2] + seg[node * 2 + 1];
+}
+void update(ll node,ll l ,ll r,ll idx,ll val) {
+    if (l == r) {
+        seg[node] = val;
+        return;
+    }
+    ll mid = (l + r) / 2;
+    if (idx <= mid) update(node * 2, l, mid, idx, val);
+    else update(node * 2 + 1, mid + 1, r, idx, val);
+    seg[node] = seg[node * 2] + seg[node * 2 + 1];
+}
+ll query(ll node,ll l ,ll r,ll st, ll en) {
+    ll mid = (l + r) / 2;
+    if (st > r || en < l)return 0;
+    if (l >= st && r <= en)return seg[node];
+    return query(node * 2, l, mid, st, en) + query(node * 2 + 1, mid + 1, r, st, en);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Lazy_propgation
+
+
+    // poynomial  lazy 1 2 3 4 5 
+void propagate( int node , int l , int r )
+{
+    if(lazy[node] == 0)
+        return;
+    if(l==r){
+        //cout<<"lazy\n";
+        a[l]=vec[lazy[node]];
+    }
+    if(l != r) {
+        ll md=(l+r)/2;
+        lazy[node << 1] = lazy[node];
+        lazy[node << 1 | 1] = lazy[node]+md-l+1;
+    }
+    lazy[node] = 0;
+
+
+
+ll seg[N];
+ll arr[N];
+ll lazy[N];
+void Build_seg(ll node,ll l, ll r) {
+    ll mid = (l + r) / 2;
+  lazy[node] = 0;    // vip dont have to make it 0  because 0 could be val ; spicial in assign all [l,r] to v;
+    if (l == r) {
+        seg[node] = arr[l];
+        return;
+    }
+    Build_seg(node * 2, l, mid);
+    Build_seg(node * 2 + 1, mid + 1, r);
+    seg[node] = seg[node * 2] + seg[node * 2 + 1];
+}
+
+void propagate(ll node,ll l,ll r) {
+    if (lazy[node] == 0) {
+        return;
+    }
+    seg[node] += lazy[node] * (r - l + 1);
+    if (l != r) {
+        lazy[node *2] += lazy[node];
+        lazy[node *2+1] += lazy[node];
+    }
+    lazy[node] = 0;
+}
+void update(ll node, ll l , ll r, ll st,ll en,ll val) {
+    ll mid = (l + r) / 2;
+    propagate(node, l, r);
+    if (l > en || r < st) {
+        return;
+    }
+    if (l >= st && r <= en) {
+        lazy[node] = val;
+        propagate(node, l, r);
+        return;
+    }
+    update(node * 2, l, mid, st, en, val);
+    update(node * 2 + 1, mid + 1, r, st, en, val);
+    seg[node] = seg[node * 2] + seg[node * 2 + 1];
+}
+ll query(ll node, ll l , ll r, ll st,ll en) {            // query for ftra if you want idx make it or use st=en
+    propagate(node, l, r);					
+    if (l > en || r < st)				// vip  if you used seg[node*2] should use propgatio imp step 3;
+        return 0;
+    if (l >= st && r <= en)
+        return seg[node];
+    ll mid = l + r >> 1;
+    return query(node *2, l, mid, st, en) + query(node *2+1, mid + 1, r, st, en);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+matrix expo ziad
+
+vii mult(vii &a, vii &b)
+{
+    int n = a.size(), m = b[0].size(), f = b.size();
+
+    vii c(n, vi(m, 0));
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            for (int k = 0; k < f; k++)
+                c[i][j] += a[i][k] * b[k][j];
+    return c;
+}
+
+vii idendity(int n)
+{
+    vii arr(n, vi(n, 0));
+    for (int i = 0; i < n; i++) arr[i][i] = 1;
+    return arr;
+}
+
+vii expo(vii a, int x)
+{
+    int n = a.size();
+    if (x == 0) return idendity(n);
+    if (x == 1) return a;
+
+    vii newa = expo(a, x / 2);
+
+    vii ans = mult(newa, newa);
+    if (x % 2 == 1) ans = mult(ans, a);
+
+    return ans;
+}
+
+// long loooooooooooooooong;
+void solve(ll kkkk, ll tttt)
+{
+    int n; double x;
+    cin >> n >> x;
+
+    vii a{{1 - x, x}, {x, 1 - x}};
+
+    a = expo(a, n);
+
+    vii other{{1}, {0}};
+    vii ans = mult(a, other);
+
+    double answer = ans[0][0];
+    cout << answer << endl;
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ Bracket up in pdf
+void solve( ll h) {
+    ll n;
+    cin>>n;
+    string x;
+    cin >> x;
+    vi l(x.size(), -1e9), r(x.size(), -1e9);
+    ll cnt = 0;
+    for (int i = 0; i < x.size(); ++i) {
+        cnt += x[i] == '(' ? 1 : -1;
+        if (cnt < 0)break;
+        l[i] = cnt;
+    }
+    cnt=0;
+    for (int i = x.size() - 1; i >= 0; --i) {
+        cnt += x[i] == ')' ? 1 : -1;
+        if (cnt < 0)break;
+        r[i] = cnt;
+    }
+    ll ans = 0;
+    for (int i = 0; i < x.size(); ++i) {
+        if (i == 0) {
+            if (x[i] == ')') { ans += (r[i + 1] == 1); }
+        } else if (i == n - 1) {
+            if (x[i] == '(') { ans += (l[i - 1] == 1); }
+        } else if (x[i] == ')') {
+            ans += (r[i + 1] - 1 == l[i - 1]);
+        } else {
+            ans += (l[i - 1] - 1 == r[i + 1]);
+        }
+    }
+ 
+    cout << ans << endl;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////// NCR vippppp
+ll add(ll a, ll b) {
+    return ((a % MOD + b % MOD) + MOD) % MOD;
+}
+
+ll multi(ll a, ll b) {
+    return ((a % MOD * b % MOD) + MOD) % MOD;
+}
+
+ll fastpow(ll a, ll b) {
+    if (b == 0)return ll(1);
+    ll temp = fastpow(a, b / 2);
+    ll total = multi(temp, temp);
+    if (b % 2 == 1) {
+        total = multi(total, a);
+    }
+    return total;
+}
+int fact[N], inv[N];
+int nCr( ll n , ll r)
+{
+    return multi(fact[n],multi(inv[n-r],inv[r]));
+}
+    fact[0] = inv[0] = 1;
+    for (int i = 1; i <= N; i++) {
+        fact[i] = multi(i, fact[i - 1]);
+        inv[i] = fastpow(fact[i], MOD - 2);
+}
+
+
+//// pasacl
+
+ll ncr[56][56];
+void Build() {
+    for (ll i = 0; i < 50; i++)
+        ncr[i][0] = 1;
+    for (ll i = 1; i < 50; i++) {
+        for (ll j = 1; j <= i; j++)
+            ncr[i][j] = ncr[i - 1][j - 1] + ncr[i - 1][j];
+    }
+}
+ll nCr( ll n , ll r) {
+    if(r>n)return 0;
+    return ncr[n][r];
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////Mo alogo 
+
+
+ll block;
+struct query {
+    ll l, r, idx;
+};
+bool cmp(query &a, query &b) {
+    if (a.l / block != b.l / block)
+        return a.l / block < b.l / block;
+    return a.r < b.r;
+}
+void add(ll i,vi &mp,vi &a,ll &sum) {
+    sum -= mp[a[i]] * mp[a[i]] * a[i];           // mp is freq map           a is array 
+    mp[a[i]]++;
+    sum += mp[a[i]] * mp[a[i]] * a[i];
+}
+ 
+void remove(ll i,vi &mp,vi &a,ll &sum) {
+    sum -= mp[a[i]] * mp[a[i]] * a[i];
+    mp[a[i]]--;
+    sum += mp[a[i]] * mp[a[i]] * a[i];
+}
+cin >> n>> q;
+    vi a(n);
+    vi mp(1e6+5,0);
+    block = (ll) sqrt(n) + 1;
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+    vector<query> vec(q);
+    for (int i = 0; i < q; ++i) {
+        cin >> vec[i].l >> vec[i].r;
+        vec[i].l--, vec[i].r--;
+        vec[i].idx = i;
+    }
+    sort(all(vec), cmp);
+    vector<ll> res(q);
+    int l = 0, r = -1;
+    ll sum=0;
+    for (int i = 0; i <vec.size() ; ++i) {
+        query x = vec[i];
+        while (l > x.l)add(--l, mp, a, sum);
+        while (r < x.r)add(++r, mp, a, sum);
+        while (l < x.l)remove(l++, mp, a, sum);
+        while (r > x.r)remove(r--, mp, a, sum);
+        res[x.idx] = sum;
+    }
+    for (int i = 0; i < q; ++i) {
+        cout << res[i] << endl;
+    }
+ 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////tarjan
+
+vii adj;
+stack<int> stk;
+vector<bool> inStack(N,false);
+vector<bool> vis(N,false);
+vector<int> dfsNum(N,-1);
+vector<int> lowLink(N);
+vector<vector<int>> comps;
+int tim = 1;
+void dfs(int node){
+    vis[node] = true;
+    inStack[node] = true;
+    stk.push(node);
+    dfsNum[node] = lowLink[node] = tim++;
+
+    for(int nei : adj[node]){
+        if(!vis[nei]){
+            dfs(nei);
+            lowLink[node] = min(lowLink[node],lowLink[nei]);
+        }else if(inStack[nei])
+            lowLink[node] = min(lowLink[node],dfsNum[nei]);
+    }
+    if(dfsNum[node] == lowLink[node]){
+        vector<int> comp;
+        while (stk.top() != node){
+            int pop = stk.top();
+            stk.pop();
+            inStack[pop] = false;
+            comp.push_back(pop);
+        }
+        int pop = stk.top();
+        stk.pop();
+        inStack[pop] = false;
+        comp.push_back(pop);
+        comps.push_back(comp);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+
+
+
+
+
+								Dp on Tree 
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  maximum not  adjacent on tree
+
+void dfs(ll node, ll par, vi & dp1,vi &dp2,vii &adj,vi &cst) {
+
+
+    //for storing sums of dp1 and max(dp1, dp2) for all children of V
+    // dp1[x] sum if we take x and our grand child ;
+    // dp2[x] sum if we leave x and take our child or grand child;
+    
+    // sum1= to accumlate if we avoid to take our child and take this node
+    // sum2=to avoid to take this node and take (child or their child   vip  depend on max we dont alternate 1 3 5 ///// 2 4 6 noo )
+
+    ll sum1 = 0, sum2 = 0;
+    //traverse over all children
+
+    for (auto ch: adj[node]) {
+        if (par == ch) continue;
+        dfs(ch, node, dp1, dp2, adj, cst);
+        sum1 += dp2[ch];
+        sum2 += max(dp1[ch], dp2[ch]);
+    }
+    dp1[node] = cst[node] + sum1;
+    dp2[node] = sum2;
+}
+dfs(root,-1);
+ans = max(dp1[1], dp2[1]);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////sparce table on treee
+
+
+
+const int N=3e5+10;
+const int M = 30;
+ll ansector[N][M];
+ll sp[N][M];
+ll lvl[N];
+vii adj;
+
+void dfs(ll node, ll par,vi &cst) {
+    ansector[node][0] = par;
+    sp[node][0] = max(cst[node], cst[par]);
+    lvl[node] = lvl[par] + 1;
+    for (int i = 1; i < M; ++i) {
+        ansector[node][i] = ansector[ansector[node][i - 1]][i - 1];
+    }
+    for (int i = 1; i < M; ++i) {
+        sp[node][i] = max(sp[node][i-1],sp[ansector[node][i - 1]][i - 1]);
+    }
+    for (auto ch: adj[node]) {
+        if (ch == par)continue;
+        dfs(ch, node, cst);
+    }
+}
+
+ll findKthAncestor(ll u, ll k) {
+    for (int i = M - 1; i >= 0; --i) {
+        if ((1 << i) & k)
+            u = ansector[u][i];
+    }
+    return u;
+}
+
+ll findKthmax(ll u, ll k) {
+    ll z = -oo;
+    for (int i = M - 1; i >= 0; --i) {
+        if ((1 << i) & k) {
+            z = max(z, sp[u][i]);
+            u = ansector[u][i];
+        }
+    }
+    return z;
+}
+
+ll LCA(ll u, ll v) {
+    if (lvl[u] < lvl[v])
+        swap(u, v);
+    u = findKthAncestor(u, lvl[u] - lvl[v]);
+    if (u == v)return v;
+
+    for (int i = M - 1; i >= 0; --i) {
+        if (ansector[u][i] == ansector[v][i])continue;
+        u = ansector[u][i];
+        v = ansector[v][i];
+    }
+    return ansector[u][0];
+}
+ll maxo(ll u,ll v) {
+    if (lvl[u] < lvl[v])
+        swap(u, v);
+    ll lc = LCA(u, v);
+    if (lc == v) {
+        return findKthmax(u, lvl[u] - lvl[v]);
+    } else {
+        return max(findKthmax(u, lvl[v] - lvl[lc]), findKthmax(u, lvl[u] - lvl[lc]));
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  union segment to get minmum seg represent many seg
+
+    sort(all(res));
+    for (int i = 1; i < res.size(); ++i) {
+        if (res[i].first <= res[i - 1].second) {
+            res[i].first = res[i - 1].first;
+            res[i - 1].first = oo;
+            res[i].second= max(res[i].second,res[i-1].second);
+        }
+    }
+    for (int i = 0; i < res.size(); ++i) {
+        if (res[i].first != oo) {
+            seg.push_back(res[i]);    ///// new segments
+        } 
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////monotonic stack 
+
+    int a[n], dp[n], mxl[n], mxr[n], mnl[n], mnr[n];
+    iota(dp, dp + n, 0);
+    for(int i = 0; i < n; i++) cin >> a[i];
+    stack<int> s1, s2, s3, s4;
+    for(int i = 0; i < n; i++) {
+        while(!s1.empty() && a[s1.top()] < a[i]) s1.pop();
+        while(!s2.empty() && a[s2.top()] > a[i]) s2.pop();
+        while(!s3.empty() && a[s3.top()] < a[n - 1 - i]) s3.pop();
+        while(!s4.empty() && a[s4.top()] > a[n - 1 - i]) s4.pop();
+        mxl[i] = s1.empty() ? n : i - s1.top();
+        mnl[i] = s2.empty() ? n : i - s2.top();
+        mxr[n - 1 - i] = s3.empty() ? n : s3.top() - (n - 1 - i);
+        mnr[n - 1 - i] = s4.empty() ? n : s4.top() - (n - 1 - i);
+        s1.push(i);
+        s2.push(i);
+        s3.push(n - 1 - i);
+        s4.push(n - 1 - i);
+    }
+ 
+
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
